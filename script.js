@@ -4,6 +4,7 @@ const insect = document.getElementById("insect");
 const score = document.getElementById("score");
 const gameOver = document.getElementById("gameOver");
 const scoreMessage = document.getElementById("scoreMessage");
+const bestScoreMessage = document.getElementById("bestScoreMessage");
 const restart = document.getElementById("restart");
 let timeLeft = 60;
 
@@ -13,6 +14,7 @@ let bombSnd = new Audio('explosion.mp3');
 
 let isKilling = false; //variable to avoid double/triple killing the same insect
 let scoreCount = 0;
+let bestScore = 0;
 let bomb = false;
 
 hitbox.addEventListener("click", () => {
@@ -90,7 +92,7 @@ function restartGame() {
         timeLeft = 60; //reset timer
         scoreCount = 0; // reset score
         finalMessage.textContent = "Game Over" // reset final message
-        score.textContent = `Insects killed: ${scoreCount}`; //reset score message
+        score.textContent = `Score: ${scoreCount}`; //reset score message
 
     })
 
@@ -99,6 +101,7 @@ function restartGame() {
 function finishGame() {
     insect.style.display = "none";
     scoreMessage.textContent = `Your score was: ${scoreCount}`;
+    bestScoreMessage.textContent= `Your best score so far is: ${findBestScore()}`;
     gameOver.style.display = "block";
     restartGame();
 }
@@ -108,7 +111,14 @@ function updateScore() {
     if (!bomb) {
         scoreCount += 1;
     }
-    score.textContent = `Insects killed: ${scoreCount}`;
+    score.textContent = `Score: ${scoreCount}`;
+}
+
+function findBestScore() {
+    if (scoreCount > bestScore) {
+        bestScore = scoreCount;
+    }
+    return bestScore;
 }
 
 // Function to update the countdown timer
@@ -118,7 +128,7 @@ function updateTimer() {
     const seconds = timeLeft % 60;
     
     // Display the time in the "mm:ss" format
-    timer.textContent = `Time remaining: ${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+    timer.textContent = `Time: ${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
     
     // Check if the timer has reached 0
     if (timeLeft === 0) {
@@ -154,7 +164,12 @@ function restartSound() {
 
 
 // scoreboard with 3 best results
+// work on cellphone
+
+// ------------- after
 // is it too high of a dream to think that we could do a multiplayer scoreboard? keep track of all user? HOW??
+// -> sql database, user data...
+
 
 
 

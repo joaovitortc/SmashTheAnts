@@ -58,6 +58,7 @@ filter: contrast(200%), brightness(180%);
 }
 
 #gameOver h2 {
+    top: -10%;
     position: relative;
     font-size: 36px;
     margin-bottom: 10px;
@@ -67,6 +68,7 @@ filter: contrast(200%), brightness(180%);
 }
 
 #gameOver h3 {
+    top: -10%;
     position: relative;
     font-size: 24px;
     margin-bottom: 20px;
@@ -74,6 +76,7 @@ filter: contrast(200%), brightness(180%);
 
 #gameOver button {
     position: relative;
+    top: -20%;
     background-color: #f39c12;
     color: #fff;
     font-size: 24px;
@@ -82,10 +85,56 @@ filter: contrast(200%), brightness(180%);
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin: 20px;
 }
 
 #gameOver button:hover {
     background-color: #e74c3c;
+}
+
+
+@media only screen and (max-width: 768px) {
+    body {
+        background-image: url("mediabackground4.jpg");
+        background-position: cover;
+    }
+
+    #menu {
+        color: black;
+        display: flex;
+        top: 0px;
+        left : 10px;
+        margin:10px;
+        display: flex;
+        
+    }
+
+   #timer {
+    padding-right: 45px;
+   }
+
+   #gameOver {
+    padding:50px;
+    display:flex;
+    align-items: center;
+   }
+
+   #gameOver h2{
+    font-size: 25px;
+   }
+
+    #gameOver h3{
+    font-size: 20px;
+    }
+
+    #gameOver button{
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    top: -18%;
+    left: -20%;
+    }
+   
 }
 
 
