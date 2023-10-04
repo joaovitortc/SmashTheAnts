@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Game</title>
+</head>
+
+<body>
+    <div id="game">
+        <div style="display:none;" id="gameOver">
+            <h2 id="finalMessage">GAME OVER</h2>
+            <h3 id="scoreMessage"></h3>
+            <button id="restart"> PLAY AGAIN</button>
+        </div>
+        <div id="menu">
+            <div id="timer">Time remaining: 1:00</div>
+            <h2 id="score">Insects killed: 0</h2>
+        </div>
+        <div id="insect">
+            <button id="hitbox" draggable="false"></button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
