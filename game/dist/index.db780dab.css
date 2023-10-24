@@ -1,0 +1,133 @@
+body {
+  background-color: #ffffff1a;
+  background-image: url("wooden_background7.47c43b08.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+#insect {
+  filter: contrast(200%), brightness(180%);
+  background-image: url("regular_ant.f85133f4.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 90% 90%;
+  border: none;
+  width: 150px;
+  height: 200px;
+  position: relative;
+}
+
+#hitbox {
+  text-align: center;
+  cursor: pointer;
+  background: none;
+  border: none;
+  width: 75px;
+  height: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#menu {
+  color: #8c7940;
+  font-family: Bradley Hand, cursive;
+  font-size: large;
+  position: absolute;
+  bottom: 0;
+  right: 30px;
+}
+
+#gameOver {
+  color: #fff;
+  text-align: center;
+  background-color: #333;
+  border-radius: 10px;
+  width: 25%;
+  height: 30%;
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 10px #00000080;
+}
+
+#gameOver h2 {
+  color: #f90c00;
+  margin-bottom: 10px;
+  font-family: Bradley Hand, cursive;
+  font-size: 36px;
+  position: relative;
+  top: -10%;
+}
+
+#gameOver h3 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  position: relative;
+  top: -10%;
+}
+
+#gameOver button {
+  color: #fff;
+  cursor: pointer;
+  background-color: #f39c12;
+  border: none;
+  border-radius: 5px;
+  margin: 20px;
+  padding: 10px 20px;
+  font-size: 24px;
+  transition: background-color .3s;
+  position: relative;
+  top: -20%;
+}
+
+#gameOver button:hover {
+  background-color: #e74c3c;
+}
+
+@media only screen and (width <= 768px) {
+  body {
+    background-image: url("mediabackground4.21a1d190.jpg");
+    background-position: cover;
+  }
+
+  #menu {
+    color: #000;
+    margin: 10px;
+    display: flex;
+    top: 0;
+    left: 10px;
+  }
+
+  #timer {
+    padding-right: 45px;
+  }
+
+  #gameOver {
+    align-items: center;
+    padding: 50px;
+    display: flex;
+  }
+
+  #gameOver h2 {
+    font-size: 25px;
+  }
+
+  #gameOver h3 {
+    font-size: 20px;
+  }
+
+  #gameOver button {
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    top: -18%;
+    left: -20%;
+  }
+}
+
+/*# sourceMappingURL=index.db780dab.css.map */
